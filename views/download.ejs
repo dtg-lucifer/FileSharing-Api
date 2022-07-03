@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(0 0 0 / .1);
+        }
+
+        .container {
+            min-width: 40%;
+            min-height: fit-content;
+            background-color: #60A5FA;
+            display: flex;
+            gap: 1rem;
+            padding: 5rem 10rem;
+            border-radius: 2rem;
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            font-weight: 600;
+            height: fit-content;
+            place-self: center;
+            width: 100%;
+        }
+
+        input {
+            height: fit-content;
+            font-size: 15px;
+            padding: .5rem 9rem .5rem 1rem;
+            place-self: center;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            border: none;
+            background-color: rgb(232, 227, 227);
+            padding: 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all .25s;
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+            grid-column: span 2;
+        }
+
+        button:hover {
+            background-color: rgb(198, 195, 195);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post">
+            <label for="password">Password</label>
+            <input type="text" name="password">
+            <button type="submit">Download</button>
+        </form>
+    </div>
+</body>
+<% if(locals.error) {%>
+    <script>alert("Incorrect Password Entered")</script>
+<% }%>
+</html>
